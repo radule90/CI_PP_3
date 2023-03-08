@@ -97,7 +97,7 @@ def username():
             print("We're glad you want to play!")
             break
         elif game_accept.lower() == "no":
-            print("Ok maybe next time. We wish you a pleasant day!")
+            print("Ok, maybe next time. We wish you a pleasant day!")
             quit()
         else:
             print("Incorrect entry!")
@@ -114,11 +114,10 @@ def game():
     answers_num = 1
     explanations_num = 1
     global meaning
-    correct_answer = ""
+    global correct_answer
     for key, value in questions.items():
         print(key)
         correct_answer = value
-        print(correct_answer)
         for possible_answer in possible_answers[answers_num - 1]:
             print(possible_answer)
         answers_num += 1
@@ -127,6 +126,19 @@ def game():
         explanations_num += 1
         user_answer = input("What do you think the meaning of the term is? A, B or C: ")
         user_answer = user_answer.upper()
+        check_answer(user_answer, correct_answer)
+
+
+def check_answer(user_answer, correct_answer):
+    """
+    Checks whether the user's answer is correct
+    """
+    if user_answer == correct_answer:
+        print(f"Well done! Answer {user_answer} is correct!")
+        print(f"Example of use: {meaning}")
+    else:
+        print(f"That was the wrong answer, {correct_answer} is correct")
+        print(f"Example of use: {meaning}")
 
 
 rules_intro()
