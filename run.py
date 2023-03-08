@@ -84,4 +84,27 @@ def rules_intro():
     print("- You will get the result and an explanation of the term.")
 
 
-rules()
+def username():
+    """
+    Asks the user to play.
+    Prompt for user name.
+    """
+    global name
+    print("-----------------")
+    while True:
+        game_accept = input("Do you want to test your knowledge? (Yes / No): ")
+        if game_accept.lower() == "yes":
+            print("We're glad you want to play!")
+            break
+        elif game_accept.lower() == "no":
+            print("Ok maybe next time. We wish you a pleasant day")
+            quit()
+        else:
+            print("Incorrect entry!")
+            print("Your answer must be Yes or No!")
+    name = input("Please enter your name: ")
+    print(f"We wish you the best of luck {name}, the game can begin!")
+
+
+rules_intro()
+username()
