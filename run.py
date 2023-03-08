@@ -97,7 +97,7 @@ def username():
             print("We're glad you want to play!")
             break
         elif game_accept.lower() == "no":
-            print("Ok maybe next time. We wish you a pleasant day")
+            print("Ok maybe next time. We wish you a pleasant day!")
             quit()
         else:
             print("Incorrect entry!")
@@ -106,5 +106,29 @@ def username():
     print(f"We wish you the best of luck {name}, the game can begin!")
 
 
+def game():
+    """
+    Iterate through questions, possible_answers and explanations.
+    And asks for user answer
+    """
+    answers_num = 1
+    explanations_num = 1
+    global meaning
+    correct_answer = ""
+    for key, value in questions.items():
+        print(key)
+        correct_answer = value
+        print(correct_answer)
+        for possible_answer in possible_answers[answers_num - 1]:
+            print(possible_answer)
+        answers_num += 1
+        for explanation in explanations[explanations_num - 1]:
+            meaning = explanation
+        explanations_num += 1
+        user_answer = input("What do you think the meaning of the term is? A, B or C: ")
+        user_answer = user_answer.upper()
+
+
 rules_intro()
 username()
+game()
