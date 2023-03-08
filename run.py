@@ -115,6 +115,8 @@ def game():
     explanations_num = 1
     global meaning
     global correct_answer
+    global score
+    score = 0
     for key, value in questions.items():
         print(key)
         correct_answer = value
@@ -126,7 +128,7 @@ def game():
         explanations_num += 1
         user_answer = input("What do you think the meaning of the term is? A, B or C: ")
         user_answer = user_answer.upper()
-        check_answer(user_answer, correct_answer)
+        score += check_answer(user_answer, correct_answer)
 
 
 def check_answer(user_answer, correct_answer):
@@ -136,11 +138,23 @@ def check_answer(user_answer, correct_answer):
     if user_answer == correct_answer:
         print(f"Well done! Answer {user_answer} is correct!")
         print(f"Example of use: {meaning}")
+        return 1
     else:
         print(f"That was the wrong answer, {correct_answer} is correct")
         print(f"Example of use: {meaning}")
+        return 0
+
+
+def scoreboard(score):
+    """
+    Calculates the percentage of correct answers
+    """
+    global result
+    result = int((score / len(questions)) * 100)
+    print(f"You have completed the quiz with {result}% correct answers.")
 
 
 rules_intro()
 username()
 game()
+scoreboard(score)
