@@ -106,7 +106,7 @@ def username():
     global name
     print("-----------------")
     while True:
-        game_accept = input("Do you want to test your knowledge? (Yes / No): ")
+        game_accept = input("Do you want to test your knowledge? (Yes / No):\n")
         if game_accept.lower() == "yes":
             print("We're glad you want to play!")
             break
@@ -116,7 +116,7 @@ def username():
         else:
             print("Incorrect entry!")
             print("Your answer must be Yes or No!")
-    name = input("Please enter your name: ")
+    name = input("Please enter your name:\n")
     print(f"We wish you the best of luck {name}, the game can begin!")
 
 
@@ -138,7 +138,7 @@ def game():
         for explanation in explanations[explanations_num - 1]:
             meaning = explanation
         explanations_num += 1
-        user_answer = input("What do you think the meaning of the term is? A, B or C: ")
+        user_answer = input("What do you think the meaning of the term is? A, B or C:\n")
         user_answer = user_answer.upper()
         score += check_answer(user_answer, correct_answer, meaning)
     scoreboard(score)
@@ -187,7 +187,7 @@ def new_game(user_name, final_result):
     while True:
         if final_result == 100:
             print(f"Wonderful {user_name}, {final_result}% score, you have perfected Canadian slang!")
-            play_again = input("Do you want to confirm your knowledge or have one of your friends try? (Yes /  No): ")
+            play_again = input("Do you want to confirm your knowledge or have one of your friends try? (Yes /  No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
@@ -197,7 +197,7 @@ def new_game(user_name, final_result):
                 continue
         elif final_result >= 50:
             print(f"Congratulations {user_name} on {final_result}% score, we believe you can score 100% in the next round!")
-            play_again = input("Do you want to try again? Maybe your friends want to try? (Yes / No): ")
+            play_again = input("Do you want to try again? Maybe your friends want to try? (Yes / No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
@@ -207,7 +207,7 @@ def new_game(user_name, final_result):
                 continue
         elif final_result < 50:
             print(f"Well {user_name}, we think you can do more than {final_result}%!")
-            play_again = input("Do you want to try your luck? Maybe your friends want to try? (Yes / No): ")
+            play_again = input("Do you want to try your luck? Maybe your friends want to try? (Yes / No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
@@ -218,6 +218,9 @@ def new_game(user_name, final_result):
 
 
 def main():
+    """
+    Run all game function
+    """
     game()
     while new_game(name, result):
         game()
