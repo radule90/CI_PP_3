@@ -9,6 +9,7 @@ https://stackoverflow.com/questions/4174941/how-to-sort-a-list-of-lists-by-a-spe
 """
 from operator import itemgetter
 
+
 questions = {
     "Bunny hug": "C",
     "Miskeen": "C",
@@ -63,6 +64,7 @@ explanations = [
         "Derived from Chinook Jargon, skookum appears in many place names in the Pacific Northwest."
     ],
 ]
+
 
 score_table = []
 
@@ -138,11 +140,30 @@ def game():
         for explanation in explanations[explanations_num - 1]:
             meaning = explanation
         explanations_num += 1
-        user_answer = input("What do you think the meaning of the term is? A, B or C:\n")
-        user_answer = user_answer.upper()
-        score += check_answer(user_answer, correct_answer, meaning)
+        while True:
+            user_answer = input("What do you think the meaning of the term is? A, B or C:\n")
+            user_answer = user_answer.upper()
+            if validate_answer(user_answer):
+                score += check_answer(user_answer, correct_answer, meaning)
+                break
     scoreboard(score)
     ranking_list(name, result)
+
+
+def validate_answer(user_answer):
+    """
+    Inside try, checks if user input is not one of three possible.
+    Raise ValueError if input is anything else than A, B or C
+    Return True if it is not valid, so that user can input again
+    (see line 141, while loop for user_answer input) 
+    """
+    valid_user_input = ["A", "B", "C"]
+    try:
+        if user_answer not in valid_user_input:
+            raise ValueError("your answer must be A, B or C")
+        return True
+    except ValueError as e:
+        print(f"Invalid entry, {e}, please try again.")
 
 
 def check_answer(user_answer, correct_answer, meaning):
