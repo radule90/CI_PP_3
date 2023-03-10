@@ -129,6 +129,8 @@ def game():
         user_answer = user_answer.upper()
         score += check_answer(user_answer, correct_answer, meaning)
     scoreboard(score)
+    while new_game(name, result):
+        game()
 
 
 def check_answer(user_answer, correct_answer, meaning):
@@ -151,6 +153,44 @@ def scoreboard(score):
     global result
     result = int((score / len(questions)) * 100)
     print(f"You have completed the quiz with {result}% correct answers.")
+
+
+def new_game(user_name, final_result):
+    """
+    Prints different messages depend on score
+    Asks user for new game
+    """
+    while True:
+        if final_result == 100:
+            print(f"Wonderful {user_name}, {final_result} % score, you have perfected Canadian slang!")
+            play_again = input("Do you want to confirm your knowledge or have one of your friends try? (Yes /  No): ")
+            if play_again.lower() == "yes":
+                return True
+            elif play_again.lower() == "no":
+                return False
+            else:
+                print("Please enter your Yes or No!")
+                continue
+        elif final_result >= 50:
+            print(f"Congratulations {user_name} on {final_result}% score, we believe you can score 100% in the next round!")
+            play_again = input("Do you want to try again? Maybe your friends want to try? (Yes / No): ")
+            if play_again.lower() == "yes":
+                return True
+            elif play_again.lower() == "no":
+                return False
+            else:
+                print("Please enter your Yes or No!")
+                continue
+        elif final_result < 50:
+            print(f"Well {user_name}, we think you can do more than {final_result}%!")
+            play_again = input("Do you want to try your luck? Maybe your friends want to try? (Yes / No): ")
+            if play_again.lower() == "yes":
+                return True
+            elif play_again.lower() == "no":
+                return False
+            else:
+                print("Please enter your Yes or No!")
+                continue
 
 
 game()
