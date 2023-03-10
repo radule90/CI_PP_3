@@ -1,12 +1,4 @@
-"""
-For the tabular display I used code from the link below and adapted the code
-https://www.statology.org/create-table-in-python/
-"""
 from tabulate import tabulate
-"""
-I found the solution for sorting the ranking list in the link below, and adapted the code
-https://stackoverflow.com/questions/4174941/how-to-sort-a-list-of-lists-by-a-specific-index-of-the-inner-list
-"""
 from operator import itemgetter
 
 
@@ -155,7 +147,7 @@ def validate_answer(user_answer):
     Inside try, checks if user input is not one of three possible.
     Raise ValueError if input is anything else than A, B or C
     Return True if it is not valid, so that user can input again
-    (see line 141, while loop for user_answer input) 
+    (see line 141, while loop for user_answer input)
     """
     valid_user_input = ["A", "B", "C"]
     try:
