@@ -112,6 +112,7 @@ def game():
     Iterate through questions, possible_answers and explanations.
     And asks for user answer
     """
+    rules_intro()
     answers_num = 1
     explanations_num = 1
     global meaning
@@ -156,5 +157,4 @@ def scoreboard(score):
     print(f"You have completed the quiz with {result}% correct answers.")
 
 
-rules_intro()
 game()
