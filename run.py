@@ -115,9 +115,6 @@ def game():
     rules_intro()
     answers_num = 1
     explanations_num = 1
-    global meaning
-    global correct_answer
-    global score
     score = 0
     for key, value in questions.items():
         print(key)
