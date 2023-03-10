@@ -162,7 +162,7 @@ def new_game(user_name, final_result):
     """
     while True:
         if final_result == 100:
-            print(f"Wonderful {user_name}, {final_result} % score, you have perfected Canadian slang!")
+            print(f"Wonderful {user_name}, {final_result}% score, you have perfected Canadian slang!")
             play_again = input("Do you want to confirm your knowledge or have one of your friends try? (Yes /  No): ")
             if play_again.lower() == "yes":
                 return True
