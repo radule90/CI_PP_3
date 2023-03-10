@@ -39,21 +39,26 @@ explanations = [
     ["Look at this miskeen guy, he's never been to Canada's Wonderland"],
     ["Ming asked his roommate to pick up some milk at the dep."],
     [
-        "Property values plummeted when the municipality established nuisance grounds nearby."
+        "Property values plummeted"
+        "when the municipality established nuisance grounds nearby."
     ],
     [
-        "Often an invitation to engage in a fight, skoden has recently been used in battles over pipeline projects."
+        "Often an invitation to engage in a fight, "
+        "skoden has recently been used in battles over pipeline projects."
     ],
     [
-        "Having grown up in Winnipeg, the cashier knew what his customer meant when she ordered a jambuster."
+        "Having grown up in Winnipeg, the cashier knew "
+        "what his customer meant when she ordered a jambuster."
     ],
     ["Get our your scribblers and write your names on the covers."],
     ["Alina called for her friend to huck her the ball."],
     [
-        "The Donnybrook Fair in Dublin, Ireland, was so rowdy that any tussle became known as a donnybrook."
+        "The Donnybrook Fair in Dublin, Ireland, "
+        "was so rowdy that any tussle became known as a donnybrook."
     ],
     [
-        "Derived from Chinook Jargon, skookum appears in many place names in the Pacific Northwest."
+        "Derived from Chinook Jargon, "
+        "skookum appears in many place names in the Pacific Northwest."
     ],
 ]
 
@@ -100,7 +105,8 @@ def username():
     global name
     print("-----------------")
     while True:
-        game_accept = input("Do you want to test your knowledge? (Yes / No):\n")
+        game_accept = input(
+            "Do you want to test your knowledge? (Yes / No):\n")
         if game_accept.lower() == "yes":
             print("We're glad you want to play!")
             break
@@ -133,7 +139,8 @@ def game():
             meaning = explanation
         explanations_num += 1
         while True:
-            user_answer = input("What do you think the meaning of the term is? A, B or C:\n")
+            user_answer = input(
+                "What do you think the meaning of the term is? A, B or C:\n")
             user_answer = user_answer.upper()
             if validate_answer(user_answer):
                 score += check_answer(user_answer, correct_answer, meaning)
@@ -189,7 +196,11 @@ def ranking_list(user_name, final_result):
     col_names = ["User", "Score (%)"]
     score_table.append([user_name, final_result])
     sorted_table = sorted(score_table, key=itemgetter(1), reverse=True)
-    print(tabulate(sorted_table, headers=col_names, tablefmt="pretty", showindex="always"))
+    print(tabulate(
+        sorted_table,
+        headers=col_names,
+        tablefmt="pretty",
+        showindex="always"))
 
 
 def new_game(user_name, final_result):
@@ -199,8 +210,10 @@ def new_game(user_name, final_result):
     """
     while True:
         if final_result == 100:
-            print(f"Wonderful {user_name}, {final_result}% score, you have perfected Canadian slang!")
-            play_again = input("Do you want to confirm your knowledge or have one of your friends try? (Yes /  No):\n")
+            print(f"Wonderful {user_name}, {final_result}% score, "
+                  "you have perfected Canadian slang!")
+            play_again = input("Do you want to confirm your knowledge or "
+                               "have one of your friends try? (Yes / No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
@@ -209,8 +222,10 @@ def new_game(user_name, final_result):
                 print("Please enter your Yes or No!")
                 continue
         elif final_result >= 50:
-            print(f"Congratulations {user_name} on {final_result}% score, we believe you can score 100% in the next round!")
-            play_again = input("Do you want to try again? Maybe your friends want to try? (Yes / No):\n")
+            print(f"Congratulations {user_name} on {final_result}% score, "
+                  "we believe you can score 100% in the next round!")
+            play_again = input("Do you want to try again? "
+                               "Maybe your friends want to try? (Yes / No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
@@ -219,8 +234,10 @@ def new_game(user_name, final_result):
                 print("Please enter your Yes or No!")
                 continue
         elif final_result < 50:
-            print(f"Well {user_name}, we think you can do more than {final_result}%!")
-            play_again = input("Do you want to try your luck? Maybe your friends want to try? (Yes / No):\n")
+            print(f"Well {user_name}, "
+                  "we think you can do more than {final_result}%!")
+            play_again = input("Do you want to try your luck? "
+                               "Maybe your friends want to try? (Yes / No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
