@@ -235,7 +235,7 @@ def new_game(user_name, final_result):
                 continue
         elif final_result < 50:
             print(f"Well {user_name}, "
-                  "we think you can do more than {final_result}%!")
+                  f"we think you can do more than {final_result}%!")
             play_again = input("Do you want to try your luck? "
                                "Maybe your friends want to try? (Yes / No):\n")
             if play_again.lower() == "yes":
