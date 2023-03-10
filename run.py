@@ -82,6 +82,7 @@ def rules_intro():
     print("- It's up to you to guess correctly!")
     print("- Choose A, B or C and hit enter.")
     print("- You will get the result and an explanation of the term.")
+    username()
 
 
 def username():
@@ -156,5 +157,4 @@ def scoreboard(score):
 
 
 rules_intro()
-username()
 game()
