@@ -1,3 +1,14 @@
+"""
+For the tabular display I used code from the link below and adapted the code
+https://www.statology.org/create-table-in-python/
+"""
+from tabulate import tabulate
+"""
+I found the solution for sorting the ranking list in the link below, and adapted the code
+https://stackoverflow.com/questions/4174941/how-to-sort-a-list-of-lists-by-a-specific-index-of-the-inner-list
+"""
+from operator import itemgetter
+
 questions = {
     "Bunny hug": "C",
     "Miskeen": "C",
@@ -52,6 +63,8 @@ explanations = [
         "Derived from Chinook Jargon, skookum appears in many place names in the Pacific Northwest."
     ],
 ]
+
+score_table = []
 
 
 def rules_intro():
@@ -129,6 +142,7 @@ def game():
         user_answer = user_answer.upper()
         score += check_answer(user_answer, correct_answer, meaning)
     scoreboard(score)
+    ranking_list(name, result)
     while new_game(name, result):
         game()
 
@@ -153,6 +167,18 @@ def scoreboard(score):
     global result
     result = int((score / len(questions)) * 100)
     print(f"You have completed the quiz with {result}% correct answers.")
+
+
+def ranking_list(user_name, final_result):
+    """
+    Add results to list
+    Print ranking list from highest to lowest score
+    https://www.statology.org/create-table-in-python/
+    """
+    col_names = ["User", "Score (%)"]
+    score_table.append([user_name, final_result])
+    sorted_table = sorted(score_table, key=itemgetter(1), reverse=True)
+    print(tabulate(sorted_table, headers=col_names, tablefmt="pretty", showindex="always"))
 
 
 def new_game(user_name, final_result):
