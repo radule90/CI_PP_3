@@ -130,11 +130,11 @@ def game():
         explanations_num += 1
         user_answer = input("What do you think the meaning of the term is? A, B or C: ")
         user_answer = user_answer.upper()
-        score += check_answer(user_answer, correct_answer)
+        score += check_answer(user_answer, correct_answer, meaning)
     scoreboard(score)
 
 
-def check_answer(user_answer, correct_answer):
+def check_answer(user_answer, correct_answer, meaning):
     """
     Checks whether the user's answer is correct
     """
@@ -143,8 +143,7 @@ def check_answer(user_answer, correct_answer):
         print(f"Example of use: {meaning}")
         return 1
     else:
-        print(f"That was the wrong answer, {correct_answer} is correct")
-        print(f"Example of use: {meaning}")
+        print(f"That was the wrong answer!")
         return 0
 
 
