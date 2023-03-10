@@ -143,8 +143,6 @@ def game():
         score += check_answer(user_answer, correct_answer, meaning)
     scoreboard(score)
     ranking_list(name, result)
-    while new_game(name, result):
-        game()
 
 
 def check_answer(user_answer, correct_answer, meaning):
@@ -219,4 +217,10 @@ def new_game(user_name, final_result):
                 continue
 
 
-game()
+def main():
+    game()
+    while new_game(name, result):
+        game()
+
+
+main()
