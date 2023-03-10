@@ -129,6 +129,7 @@ def game():
         user_answer = input("What do you think the meaning of the term is? A, B or C: ")
         user_answer = user_answer.upper()
         score += check_answer(user_answer, correct_answer)
+    scoreboard(score)
 
 
 def check_answer(user_answer, correct_answer):
@@ -157,4 +158,3 @@ def scoreboard(score):
 rules_intro()
 username()
 game()
-scoreboard(score)
