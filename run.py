@@ -178,11 +178,11 @@ def check_answer(user_answer, correct_answer, meaning):
     Checks whether the user's answer is correct
     """
     if user_answer == correct_answer:
-        print(f"Well done! Answer {user_answer} is correct!")
+        print(f"\nWell done! Answer {user_answer} is correct!")
         print(f"Example of use: {meaning}")
         return 1
     else:
-        print(f"That was the wrong answer!")
+        print(f"\nThat was the wrong answer!")
         return 0
 
 
@@ -192,7 +192,8 @@ def scoreboard(score):
     """
     global result
     result = int((score / len(questions)) * 100)
-    print(f"You have completed the quiz with {result}% correct answers.")
+    print("=========================================================")
+    print(f"\nYou have completed the quiz with {result}% correct answers.\n")
 
 
 def ranking_list(user_name, final_result):
