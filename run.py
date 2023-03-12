@@ -103,21 +103,26 @@ def username():
     Prompt for user name.
     """
     global name
-    print("-----------------")
+    print("---------------------------------------------------------")
     while True:
         game_accept = input(
             "Do you want to test your knowledge? (Yes / No):\n")
         if game_accept.lower() == "yes":
+            print("---------------------------------------------------------")
             print("We're glad you want to play!")
             break
         elif game_accept.lower() == "no":
+            print("---------------------------------------------------------")
             print("Ok, maybe next time. We wish you a pleasant day!")
             quit()
         else:
+            print("\n******************************")
             print("Incorrect entry!")
             print("Your answer must be Yes or No!")
+            print("******************************\n")
     name = input("Please enter your name:\n")
     print(f"We wish you the best of luck {name}, the game can begin!")
+    print("=========================================================")
 
 
 def game():
