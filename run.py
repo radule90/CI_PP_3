@@ -219,40 +219,52 @@ def new_game(user_name, final_result):
     """
     while True:
         if final_result == 100:
-            print(f"Wonderful {user_name}, {final_result}% score, "
+            print(f"\nWonderful {user_name}, {final_result}% score, "
                   "you have perfected Canadian slang!")
             play_again = input("Do you want to confirm your knowledge or "
                                "have one of your friends try? (Yes / No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
+                print("---------------------------------------------------------")
+                print("Ok, maybe next time! Bye, bye!")
                 return False
             else:
+                print("\n****************************")
                 print("Please enter your Yes or No!")
+                print("****************************")
                 continue
         elif final_result >= 50:
-            print(f"Congratulations {user_name} on {final_result}% score, "
+            print(f"\nCongratulations {user_name} on {final_result}% score, "
                   "we believe you can score 100% in the next round!")
             play_again = input("Do you want to try again? "
                                "Maybe your friends want to try? (Yes / No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
+                print("---------------------------------------------------------")
+                print("Ok, maybe next time! Bye, bye!")
                 return False
             else:
+                print("\n****************************")
                 print("Please enter your Yes or No!")
+                print("****************************")
                 continue
         elif final_result < 50:
-            print(f"Well {user_name}, "
+            print(f"\nWell {user_name}, "
                   f"we think you can do more than {final_result}%!")
             play_again = input("Do you want to try your luck? "
                                "Maybe your friends want to try? (Yes / No):\n")
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
+                print("---------------------------------------------------------")
+                print("Ok, maybe next time! Bye, bye!")
                 return False
             else:
+                print("\n****************************")
                 print("Please enter your Yes or No!")
+                print("****************************")
                 continue
 
 
