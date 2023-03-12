@@ -226,7 +226,8 @@ def new_game(user_name, final_result):
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
-                print("---------------------------------------------------------")
+                print("--------------------------"
+                      "-------------------------------")
                 print("Ok, maybe next time! Bye, bye!")
                 return False
             else:
@@ -242,7 +243,8 @@ def new_game(user_name, final_result):
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
-                print("---------------------------------------------------------")
+                print("--------------------------"
+                      "-------------------------------")
                 print("Ok, maybe next time! Bye, bye!")
                 return False
             else:
@@ -258,7 +260,8 @@ def new_game(user_name, final_result):
             if play_again.lower() == "yes":
                 return True
             elif play_again.lower() == "no":
-                print("---------------------------------------------------------")
+                print("--------------------------"
+                      "-------------------------------")
                 print("Ok, maybe next time! Bye, bye!")
                 return False
             else:
