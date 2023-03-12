@@ -5,7 +5,7 @@
 [Canadian Slang Quiz](https://canadian-slang-quiz.herokuapp.com/) is Python terminal quiz game, which runs in the Code Institute mock terminal on [Heroku](https://heroku.com/).  
 Users can test their knowledge of Canadian slang through this quiz. For each term, there are three possible answers from which the user chooses one. For the correct answer, an example of the use of the term is also provided.  
   
-[Here you have a live version of the project](https://canadian-slang-quiz.herokuapp.com/)  
+[Here you have a live version of the project.](https://canadian-slang-quiz.herokuapp.com/)  
 
 
 ## Table of Contents
@@ -63,3 +63,33 @@ Users can test their knowledge of Canadian slang through this quiz. For each ter
 8. <a href="#content">Content</a>
 
 9. <a href="#media">Media</a>
+
+---
+
+## UX
+
+### Visitor Goals  
+The target audience for [Canadian Slang Quiz](https://canadian-slang-quiz.herokuapp.com/) are:  
+- People who are interested in languages (in this case English spoken in Canada).  
+- People who already know Canadian slang, but want to confirm their knowledge  
+- People who want to learn some Canadian slang.
+- People who immigrated to Canada and want to integrate by learning local slang.  
+- People who want to have fun and learn something new.  
+
+User goals are:  
+- To learn new words through a quiz, and by scoring to motivate to score as many points as possible.  
+- To have fun while learning by competing against opponents.  
+- To get to know Canada itself through new learned words, for which they will get an explanation.  
+- To challenge yourself and question your existing knowledge.  
+
+### Business Goals  
+The Business Goals of [Canadian Slang Quiz](https://canadian-slang-quiz.herokuapp.com/) are:  
+- To provide a simple educational quiz.  
+- Where through the use of the application, users gain knowledge of Canadian slang.  
+- By scoring the results, users are encouraged to repeat the quiz in order to be more successful and thus learn faster.  
+- Get users interested in Canadian culture.  
+
+### User Stories  
+- As a user interested in the quiz, I expect the game instructions to be clear and not complicated.  
+- That my score is displayed in the table, and that I can compete with my friends who will get more points.  
+- As a user who is interested in language quizzes, I want to get an explanation for the given term (question).  
