@@ -105,3 +105,26 @@ For each question there are three offered answers, to which the user answers by 
 The user is given the option to continue with the game and type in name or to quit.  
 After ten questions, the user receives as a result the percentage of correctly answered questions entered in the results table.  
 The user also receives a congratulatory message and a question whether he wants to repeat the game or to quit.  
+
+---
+
+
+
+
+
+---
+
+## Content
+
+- The following tutorials and articles helped me arrive at the final code solution
+  - [Python quiz game](https://www.youtube.com/watch?v=yriw5Zh406s)
+  - [Build a Quiz Application With Python](https://realpython.com/python-quiz-application/)
+  - [Python for Beginners – Full Course [Programming Tutorial]](https://www.youtube.com/watch?v=eWRfhZUzrAc)
+  - [Python Full Course for free](https://www.youtube.com/watch?v=XKHEtdqhLK8)
+
+---
+
+## Media
+
+- [Word Power: Test Your Knowledge of These Canadian Slang Terms](https://www.readersdigest.ca/culture/canadian-slang-terms/) - The questions in the quiz are taken from this article
+- [Maple Leaf ASCII Art](https://emojicombos.com/maple-leaf-ascii-art) - The maple leaf used in the quiz was taken from this site
