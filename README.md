@@ -109,22 +109,40 @@ The user also receives a congratulatory message and a question whether he wants 
 ---
 
 
+## Credits
+
+- [Code Institute](https://codeinstitute.net/de/)
+- Rory Patrick Sheridan (Mentor) - Great advice and guidance
+- [W3Schools](https://www.w3schools.com) - Additional learning resources
+- [Bro Code](https://www.youtube.com/watch?v=yriw5Zh406s) - Python quiz game / Used as a reference to build the app  
 
 
+---
+
+## Tools and Platforms
+
+- [Gitpod](https://gitpod.io/) - IDE for project development
+- [Github](https://github.com/) - Storing code remotely
+- [Heroku](https://heroku.com/) - Deployment
+- [CI Python Linter](https://pep8ci.herokuapp.com/)
+- [Python](https://www.python.org/)
+- [Am I Responsive](https://ui.dev/amiresponsive) - For device mockup images
+- [FireShot: Full Webpage Screenshots + Annotations](https://getfireshot.com/) - Screen Capture
+- [cloudconvert](https://cloudconvert.com/png-to-webp) - Online png to webp converter
 
 ---
 
 ## Content
 
 - The following tutorials and articles helped me arrive at the final code solution
-  - [Python quiz game](https://www.youtube.com/watch?v=yriw5Zh406s)
-  - [Build a Quiz Application With Python](https://realpython.com/python-quiz-application/)
-  - [Python for Beginners – Full Course [Programming Tutorial]](https://www.youtube.com/watch?v=eWRfhZUzrAc)
-  - [Python Full Course for free](https://www.youtube.com/watch?v=XKHEtdqhLK8)
+  - [Python quiz game](https://www.youtube.com/watch?v=yriw5Zh406s)  
+  - [Build a Quiz Application With Python](https://realpython.com/python-quiz-application/)  
+  - [Python for Beginners – Full Course [Programming Tutorial]](https://www.youtube.com/watch?v=eWRfhZUzrAc)  
+  - [Python Full Course for free](https://www.youtube.com/watch?v=XKHEtdqhLK8)  
 
 ---
 
 ## Media
 
-- [Word Power: Test Your Knowledge of These Canadian Slang Terms](https://www.readersdigest.ca/culture/canadian-slang-terms/) - The questions in the quiz are taken from this article
-- [Maple Leaf ASCII Art](https://emojicombos.com/maple-leaf-ascii-art) - The maple leaf used in the quiz was taken from this site
+- [Word Power: Test Your Knowledge of These Canadian Slang Terms](https://www.readersdigest.ca/culture/canadian-slang-terms/) - The questions in the quiz are taken from this article  
+- [Maple Leaf ASCII Art](https://emojicombos.com/maple-leaf-ascii-art) - The maple leaf used in the quiz was taken from this site  
