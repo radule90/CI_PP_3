@@ -7,6 +7,7 @@ Users can test their knowledge of Canadian slang through this quiz. For each ter
   
 [Here you have a live version of the project.](https://canadian-slang-quiz.herokuapp.com/)  
 
+---
 
 ## Table of Contents
 
@@ -93,3 +94,14 @@ The Business Goals of [Canadian Slang Quiz](https://canadian-slang-quiz.herokuap
 - As a user interested in the quiz, I expect the game instructions to be clear and not complicated.  
 - That my score is displayed in the table, and that I can compete with my friends who will get more points.  
 - As a user who is interested in language quizzes, I want to get an explanation for the given term (question).  
+
+---
+
+## How to Play  
+![How to Play](assets/img/readme/rules.webp)  
+[Canadian Slang Quiz](https://canadian-slang-quiz.herokuapp.com/) is a classic quiz game, with a set question, in this case the question is a language term and three possible answers, one of which is correct.  
+Upon launching the application, a welcome message and game rules are displayed.  
+For each question there are three offered answers, to which the user answers by entering one of three options: A, B or C.  
+The user is given the option to continue with the game and type in name or to quit.  
+After ten questions, the user receives as a result the percentage of correctly answered questions entered in the results table.  
+The user also receives a congratulatory message and a question whether he wants to repeat the game or to quit.  
