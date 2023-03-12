@@ -51,7 +51,6 @@ Users can test their knowledge of Canadian slang through this quiz. For each ter
 5. <details>
     <summary> <a href="#deployment">Deployment</a></summary>
 
-      - [Github Deployment](#github-deployment)
       - [Local Deployment](#local-deployment)
       - [Heroku Deployment](#heroku-deployment)
 
@@ -108,6 +107,46 @@ The user also receives a congratulatory message and a question whether he wants 
 
 ---
 
+## Deployment
+### Local Deployment
+#### Requirements
+- An IDE of your choice ([Visual Studio Code](https://code.visualstudio.com/))
+- [Git](https://git-scm.com/)
+- [Python](https://www.python.org/)
+
+#### How to Clone
+
+1. Go to the repository of [project](https://github.com/radule90/CI_PP_3)
+2. Click on the Code button above the list of files
+3. Choose one of remote URL: HTTPS, SSH, GitHub CLI and click the copy button or download a copy of the [project repository](https://github.com/radule90/CI_PP_3/archive/refs/heads/main.zip) and extract the zip file to your base folder.
+4. In your IDE Terminal change the current working directory to the one where you want the clone
+5. Type following code (for example is used GitHub CLI URL) in Git Bash/Terminal of IDE and press Enter:
+
+   ```
+   git clone https://github.com/radule90/CI_PP_3.git
+   ```
+
+6. You can run the project after you have Python installed, run it on an HTTP server with Python with a command such as:
+
+   ```
+   python3 run.py
+   ```
+
+#### How to Fork
+
+1. Go to the repository of [project](https://github.com/radule90/CI_PP_3)
+2. Bellow navigation bar on the top of the page in right corner you will locate Fork button
+3. When clicked, you should have a copy of repository in your GitHub
+
+### Heroku Deployment
+- Create a new [Heroku](https://heroku.com/) app, select name and region  
+- In Settings, set the buildpacks to Python and NodeJS in that order  
+- In Deploy section,  select the Github repository from the menu
+- Link the Heroku app to the Github repository  
+- Deploy the repository  
+- Click the View App button to see live version of the project
+
+---
 
 ## Credits
 
@@ -115,7 +154,6 @@ The user also receives a congratulatory message and a question whether he wants 
 - Rory Patrick Sheridan (Mentor) - Great advice and guidance
 - [W3Schools](https://www.w3schools.com) - Additional learning resources
 - [Bro Code](https://www.youtube.com/watch?v=yriw5Zh406s) - Python quiz game / Used as a reference to build the app  
-
 
 ---
 
