@@ -135,7 +135,9 @@ def game():
     explanations_num = 1
     score = 0
     for key, value in questions.items():
+        print("*********************************************************\n")
         print(key)
+        print("")
         correct_answer = value
         for possible_answer in possible_answers[answers_num - 1]:
             print(possible_answer)
@@ -144,6 +146,7 @@ def game():
             meaning = explanation
         explanations_num += 1
         while True:
+            print("---------------------------------------------------------")
             user_answer = input(
                 "What do you think the meaning of the term is? A, B or C:\n")
             user_answer = user_answer.upper()
