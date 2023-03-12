@@ -182,7 +182,7 @@ def check_answer(user_answer, correct_answer, meaning):
         print(f"Example of use: {meaning}")
         return 1
     else:
-        print(f"\nThat was the wrong answer!")
+        print("\nThat was the wrong answer!")
         return 0
 
 
