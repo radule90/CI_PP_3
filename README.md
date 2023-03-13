@@ -107,6 +107,28 @@ The user also receives a congratulatory message and a question whether he wants 
 
 ---
 
+## Features  
+- The first thing I wanted users to encounter were the welcome message with something typical of Canada, in this case a maple leaf, the rules of the game, to familiarize them with what awaits them and to give them the opportunity to decide whether they want to continue or quit.  
+![How to Play](assets/img/readme/rules.webp)  
+- Then I wanted the user to be greeted after entering the name and after completing the quiz, his personal score would be entered in the table.  
+![Username and question](assets/img/readme/ft1.webp)  
+- As for the quiz itself, I decided that in the first version there would be ten questions that would not appear randomly (you can see here [future planned upgrades](#future-features)), so that the user would get used to the terms faster and learn them as soon as possible. In order to indicate the border between the question,answers, messages in order to make it more readable, I added the lines of stars, dashes. Because this quiz is designed as an educational application. As for the answer, three possibilities are allowed A, B or C, all other entries will cause an invalid entry message ([For more look at Testing section](#testing))  
+![Question](assets/img/readme/ft2.webp)  
+- As I mentioned, this application is intended as an educational one, that's why I decided that for a correctly answered question, the user will receive an example of the use of the term. But in order to motivate users to repeat the game (through repetition one learns), there is no explanation for incorrect answers.
+![Invalid input](assets/img/readme/ft3.webp)  
+- I thought it would be best to display the user's results in tabular form and for the code I used the article [How to Create Tables in Python (With Examples)](https://www.statology.org/create-table-in-python/). To display the results in order from highest to lowest, I used [Operator itemgetter](https://docs.python.org/3/library/operator.html#operator.itemgetter).  
+![Table](assets/img/readme/ft4.webp)  
+- As a final feature, along with the final message to the user I wanted to add the possibility to restart the quiz.  
+![Restart game](assets/img/readme/ft5.webp)  
+
+### Future Features  
+- Increased number of questions and transferred to a separate file  
+- Ability to choose the number of questions  
+- A random selection of questions  
+- Colored text  
+
+---
+
 ## Validation and Testing
 
 ### Validation  
@@ -166,6 +188,7 @@ After validation through [Code Institute CI Python Linter](https://pep8ci.heroku
 3. When clicked, you should have a copy of repository in your GitHub
 
 ### Heroku Deployment
+- A requirements.txt file created with pip freeze > requirements.txt.
 - Create a new [Heroku](https://heroku.com/) app, select name and region  
 - In Settings, set the buildpacks to Python and NodeJS in that order  
 - In Deploy section,  select the Github repository from the menu
