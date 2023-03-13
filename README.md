@@ -107,6 +107,33 @@ The user also receives a congratulatory message and a question whether he wants 
 
 ---
 
+## Validation and Testing
+
+### Validation  
+Python code passed through [Code Institute CI Python Linter](https://pep8ci.herokuapp.com/) shows no errors.
+![Code Institute CI Python Linter](assets/img/readme/linter.webp)  
+
+### Testing  
+After validation through [Code Institute CI Python Linter](https://pep8ci.herokuapp.com/), the rest of the testing was done manually in console and on deployed project.  
+- In places where it is necessary to answer with Yes or No, it is possible to write the answer in lowercase letters, but anything else will cause a message that the entry is invalid.  
+![Test 1](assets/img/readme/test1.webp)  
+- All characters are allowed in the name prompt, to allow contestants with the same name to add a number or other character to their name.  
+![Test 2](assets/img/readme/test2.webp)  
+- Where it is necessary to enter an answer for a question, it is possible to answer only with A, B or C (lowercase letters are also allowed). Other entries will cause an error message.  
+![Test 3](assets/img/readme/test3.webp)  
+
+
+### Bugs  
+
+#### Fixed Bugs  
+- Some lines of code were too long, so I was getting an E501 error. Using the recommendations from the article [How to Break Long Lines in Python](https://www.codingem.com/python-how-to-break-long-lines/), I break long lines of code, so the error no longer appears.  
+![Error Example 1](assets/img/readme/error1.webp)
+
+- After fixing the problem with lines that were too long, the result variable was no longer displayed. The solution was simple, when I brake the line, I forgot to add the prefix f (f-Strings)  
+![Error Example 2](assets/img/readme/error2.webp)
+
+---
+
 ## Deployment
 ### Local Deployment
 #### Requirements
