@@ -11,7 +11,8 @@ Users can test their knowledge of Canadian slang through this quiz. For each ter
 
 ## Table of Contents
 
-1. <details>
+1. <a href="#media">Flowchart</a>
+2. <details>
    <summary><a href="#ux">UX</a></summary>
 
    - [Visitor Goals](#visitor-goals)
@@ -20,18 +21,18 @@ Users can test their knowledge of Canadian slang through this quiz. For each ter
 
 </details>
 
-2. <a href="#how-to-play">How to Play</a>
+3. <a href="#how-to-play">How to Play</a>
 
 </details>
 
-3. <details>
+4. <details>
    <summary><a href="#features">Features</a></summary>
 
    - [Future Features](#future-features)
 
 </details>
 
-4.  <details>
+5.  <details>
     <summary><a href="#validation-and-testing">Validation and Testing</a></summary>
     <ul>
     <li><a href="#validation">Validation</a></li>
@@ -48,7 +49,7 @@ Users can test their knowledge of Canadian slang through this quiz. For each ter
 
 </details>
   
-5. <details>
+6. <details>
     <summary> <a href="#deployment">Deployment</a></summary>
 
       - [Local Deployment](#local-deployment)
@@ -56,13 +57,19 @@ Users can test their knowledge of Canadian slang through this quiz. For each ter
 
 </details>
 
-6. <a href="#credits">Credits</a>
+7. <a href="#credits">Credits</a>
 
-7. <a href="#tools-and-platforms">Tools and Platforms</a>
+8. <a href="#tools-and-platforms">Tools and Platforms</a>
 
-8. <a href="#content">Content</a>
+9. <a href="#content">Content</a>
 
-9. <a href="#media">Media</a>
+10. <a href="#media">Media</a>
+
+---
+
+## Flowchart  
+The flowchart that was the guideline during the coding process, there were some deviations, but in principle it served as a guide.  
+![Flowchart](assets/img/readme/flowchart.webp)
 
 ---
 
