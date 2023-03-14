@@ -99,33 +99,45 @@ The Business Goals of [Canadian Slang Quiz](https://canadian-slang-quiz.herokuap
 ## How to Play  
 ![How to Play](assets/img/readme/rules.webp)  
 [Canadian Slang Quiz](https://canadian-slang-quiz.herokuapp.com/) is a classic quiz game, with a set question, in this case the question is a language term and three possible answers, one of which is correct.  
-Upon launching the application, a welcome message and game rules are displayed.  
-For each question there are three offered answers, to which the user answers by entering one of three options: A, B or C.  
-The user is given the option to continue with the game and type in name or to quit.  
-After ten questions, the user receives as a result the percentage of correctly answered questions entered in the results table.  
-The user also receives a congratulatory message and a question whether he wants to repeat the game or to quit.  
+- Upon launching the application, a welcome message and game rules are displayed.  
+- For each question there are three offered answers, to which the user answers by entering one of three options: A, B or C.  
+- The user is given the option to continue with the game and type in name or to quit.  
+- After ten questions, the user receives as a result the percentage of correctly answered questions entered in the results table.  
+- The user also receives a congratulatory message and a question whether he wants to repeat the game or to quit.  
 
 ---
 
 ## Features  
-- The first thing I wanted users to encounter were the welcome message with something typical of Canada, in this case a maple leaf, the rules of the game, to familiarize them with what awaits them and to give them the opportunity to decide whether they want to continue or quit.  
+- The first thing I wanted users to encounter were:
+  - The welcome message with something typical of Canada, in this case a [Maple Leaf ASCII Art](https://emojicombos.com/maple-leaf-ascii-art)  
+  - The rules of the game, to familiarize them with what awaits them 
+  - And to give them the opportunity to decide whether they want to continue or quit. In order to keep repeating the question until an affirmative or negative answer is obtained, in order to achieve this I decided to use a "while loop" and a "break statement", and to quit the game I used the built-in Python quit() Function (After researching, solution discovered on [exit() in Python](https://www.scaler.com/topics/exit-in-python/)).
+  - To control the flow of response input, I opted for "if / else Statements" where I decided to convert the user's response to lowercase using the string [lower() Method](https://www.w3schools.com/python/ref_string_lower.asp) for comparison
 ![How to Play](assets/img/readme/rules.webp)  
 - Then I wanted the user to be greeted after entering the name and after completing the quiz, his personal score would be entered in the table.  
+- For the name query, I opted for the [Built-in Function input()](https://docs.python.org/3/library/functions.html#input) as a simple and effective solution, and I decided not to limit the input of the name to letters only, because there might be multiple users of the same name. So, users can use other characters to distinguish themselves.  
+- Since I wanted to use the username and result for messages through other functions, I added the [Keyword global](https://www.w3schools.com/python/python_variables_global.asp) even though it may lead to potential problems when extending the application. But given the current scope of the game, I found it acceptable (although I plan on removing them in future versions). While the other variables to which I first assigned global(example: `global meaning`), I removed and added as an argument to the functions that use them(`check_answer(user_answer, correct_answer, meaning)`).
 ![Username and question](assets/img/readme/ft1.webp)  
-- As for the quiz itself, I decided that in the first version there would be ten questions that would not appear randomly (you can see here [future planned upgrades](#future-features)), so that the user would get used to the terms faster and learn them as soon as possible. In order to indicate the border between the question,answers, messages in order to make it more readable, I added the lines of stars, dashes. Because this quiz is designed as an educational application. As for the answer, three possibilities are allowed A, B or C, all other entries will cause an invalid entry message ([For more look at Testing section](#testing))  
+- As for the quiz itself, I decided that in the first version there would be ten questions that would not appear randomly (you can see here [future planned upgrades](#future-features)), so that the user would get used to the terms faster and learn them as soon as possible. In order to indicate the border between the question,answers, messages in order to make it more readable, I added the lines of stars, dashes. Because this quiz is designed as an educational application. As for the answer, three possibilities are allowed A, B or C, all other entries will cause an invalid entry message ([For more look at Testing section](#testing))
+- For iterating through the lists of questions and answers, I decided on a "for loop", where I found inspiration in the following project [Python quiz game](https://www.youtube.com/watch?v=yriw5Zh406s)
+- I decided to chain functions for better control of the flow, after talking with the mentor  
 ![Question](assets/img/readme/ft2.webp)  
 - As I mentioned, this application is intended as an educational one, that's why I decided that for a correctly answered question, the user will receive an example of the use of the term. But in order to motivate users to repeat the game (through repetition one learns), there is no explanation for incorrect answers.
+- To check the accuracy of the results, I defined a simple function with an "if else statement" where the correct and the entered answer are compared, considering it the simplest and most effective solution.
+- While to check the validity of the answer entry, I used a combination of if statements with try /except inspired by the [Love Sandwiches Project by Code Institute](https://codeinstitute.net) and [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)  
 ![Invalid input](assets/img/readme/ft3.webp)  
-- I thought it would be best to display the user's results in tabular form and for the code I used the article [How to Create Tables in Python (With Examples)](https://www.statology.org/create-table-in-python/). To display the results in order from highest to lowest, I used [Operator itemgetter](https://docs.python.org/3/library/operator.html#operator.itemgetter).  
+- I thought it would be best to display the user's results in tabular form and for the code I used the article [How to Create Tables in Python (With Examples)](https://www.statology.org/create-table-in-python/) and [tabulate library](https://pypi.org/project/tabulate/) which is installed by entering the following command in the terminal `pip install tabulate`.
+- Since I wanted the results to be displayed in descending order, I researched and found the following solution [itemgetter from operator module](https://docs.python.org/3/library/operator.html#operator.itemgetter) to retrieve specific fields from a list with `sorted()` method ([Python sorted()](https://www.programiz.com/python-programming/methods/built-in/sorted)) and to achieve the desired results I added `reverse=True` so that ranking list is in descending order.  
 ![Table](assets/img/readme/ft4.webp)  
-- As a final feature, along with the final message to the user I wanted to add the possibility to restart the quiz.  
+- As a final feature, along with the final message to the user I wanted to add the possibility to restart the quiz.
+- Where I decided to use all the concepts used in the previous code  
 ![Restart game](assets/img/readme/ft5.webp)  
 
 ### Future Features  
+- Colored text with [colorama module](https://pypi.org/project/colorama/)  
+- A random selection of questions  
 - Increased number of questions and transferred to a separate file  
 - Ability to choose the number of questions  
-- A random selection of questions  
-- Colored text  
 
 ---
 
@@ -175,7 +187,13 @@ After validation through [Code Institute CI Python Linter](https://pep8ci.heroku
    git clone https://github.com/radule90/CI_PP_3.git
    ```
 
-6. You can run the project after you have Python installed, run it on an HTTP server with Python with a command such as:
+6. In order to work properly, it needs to be installed [tabulate library](https://www.statology.org/create-table-in-python/), type following code in Git Bash/Terminal:
+
+   ```
+   pip install tabulate
+   ```
+
+7. You can run the project after you have Python installed, run it on an HTTP server with Python with a command such as:
 
    ```
    python3 run.py

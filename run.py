@@ -162,7 +162,7 @@ def validate_answer(user_answer):
     Inside try, checks if user input is not one of three possible.
     Raise ValueError if input is anything else than A, B or C
     Return True if it is not valid, so that user can input again
-    (see line 141, while loop for user_answer input)
+    (see line 148, while loop for user_answer input)
     """
     valid_user_input = ["A", "B", "C"]
     try:
