@@ -11,7 +11,7 @@ Users can test their knowledge of Canadian slang through this quiz. For each ter
 
 ## Table of Contents
 
-1. <a href="#media">Flowchart</a>
+1. <a href="#flowchart">Flowchart</a>
 2. <details>
    <summary><a href="#ux">UX</a></summary>
 
