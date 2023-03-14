@@ -138,6 +138,7 @@ The Business Goals of [Canadian Slang Quiz](https://canadian-slang-quiz.herokuap
 - A random selection of questions  
 - Increased number of questions and transferred to a separate file  
 - Ability to choose the number of questions  
+- Adding strip() method to remove the space and accept input of answers and Yes/No.
 
 ---
 
@@ -149,11 +150,52 @@ Python code passed through [Code Institute CI Python Linter](https://pep8ci.hero
 
 ### Testing  
 After validation through [Code Institute CI Python Linter](https://pep8ci.herokuapp.com/), the rest of the testing was done manually in console and on deployed project.  
-- In places where it is necessary to answer with Yes or No, it is possible to write the answer in lowercase letters, but anything else will cause a message that the entry is invalid.  
+While coding I mostly used the print function to check if I was getting the intended results.  
+
+<table>
+   <thead>
+     <tr>
+       <th>Expected </th>
+       <th>Testing</th>
+       <th>Result</th>
+       <th>Fix</th>
+       <th>Possible upgrade</th>
+   </thead>
+   <tbody>
+     <tr>
+       <td>The opening prompt in the game is:  "Do you want to test your knowledge? (Yes / No)" with the expected answer is either "Yes" or "No" (lowercase or uppercase letters are allowed). Any other entry will cause a message "Incorrect entry! Your answer must be Yes or No!" The message will be repeated until the conditions are met. If "Yes" is selected it continues its flow, if "No" is selected it quits the program.</td>
+       <td>I tested the feature by entering various upper and lower case letters, words, numbers, symbols, blank lines, spaces, combinations of all of the above.</td>
+       <td>The program feature behaved as I planned, only "Yes" or "No" input was accepted in all forms except with added space.</td>
+       <td>No fix needed.</td>
+       <td>Adding strip() method to remove the space and accept input.</td>
+     </tr>
+     <tr>
+       <td>"Please enter your name:" feature of the program expects the user's name to be entered and all characters, including spaces, are accepted. So that users of the same name could add some symbol for differentiation.</td>
+       <td>I did the testing by entering all possible characters, spaces.</td>
+       <td>Everything was accepted. But for the sake of readability, the number of characters should be limited to about 20 in the future version.</td>
+       <td>No fix needed.</td>
+       <td>Character limit.</td>
+     </tr>
+     <tr>
+       <td>The next feature tested is entering answers to questions. Where it is expected to accept A, B or C for input (lowercase or uppercase). An error is expected for every other input: "Invalid entry, your answer must be A, B or C, please try again.". The message will be repeated until the conditions are met.</td>
+       <td>I tested the feature by entering various upper and lower case letters, words, numbers, symbols, blank lines, spaces, combinations of all of the above.</td>
+       <td>The application behaved as I expected, the entries A, B, C were accepted (uppercase and lowercase except with added space). For all others, an invalid input message was output</td>
+       <td>No fix needed.</td>
+       <td>Adding strip() method to remove the space and accept input.</td>
+     </tr>
+     <tr>
+       <td>The last question to the user is whether he wants to repeat the game and the possible answers are "Yes" and "No". If "Yes" is selected it continues its flow, if "No" is selected it quits the program. "Please enter your Yes or No!" message is received for all other entries. The message will be repeated until the conditions are met.</td>
+       <td>I did the testing by entering all possible characters, spaces etc.</td>
+       <td>The program feature behaved as I planned, only "Yes" or "No" input was accepted in all forms except with added space.</td>
+       <td>No fix needed.</td>
+       <td>Adding strip() method to remove the space and accept input.</td>
+     </tr>
+   </tbody>
+ </table>
+
+Testing examples:  
 ![Test 1](assets/img/readme/test1.webp)  
-- All characters are allowed in the name prompt, to allow contestants with the same name to add a number or other character to their name.  
 ![Test 2](assets/img/readme/test2.webp)  
-- Where it is necessary to enter an answer for a question, it is possible to answer only with A, B or C (lowercase letters are also allowed). Other entries will cause an error message.  
 ![Test 3](assets/img/readme/test3.webp)  
 
 
