@@ -257,6 +257,7 @@ Testing examples:
 ### Heroku Deployment
 - A requirements.txt file created with pip freeze > requirements.txt.
 - Create a new [Heroku](https://heroku.com/) app, select name and region  
+- Add Config Var to Heroku settings, where key is PORT and the value is 8000  
 - In Settings, set the buildpacks to Python and NodeJS in that order  
 - In Deploy section,  select the Github repository from the menu
 - Link the Heroku app to the Github repository  
@@ -283,8 +284,8 @@ Testing examples:
 - [Python](https://www.python.org/)
 - [Am I Responsive](https://ui.dev/amiresponsive) - For device mockup images
 - [FireShot: Full Webpage Screenshots + Annotations](https://getfireshot.com/) - Screen Capture
-- [cloudconvert](https://cloudconvert.com/png-to-webp) - Online png to webp converter
-
+- [cloudconvert](https://cloudconvert.com/png-to-webp) - Online png to webp converter  
+- [Lucid](https://lucid.app/) - Flowchart
 ---
 
 ## Content
